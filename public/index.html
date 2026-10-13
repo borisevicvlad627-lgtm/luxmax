@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>sb — персональный AI-coach</title>
+<meta name="description" content="sb — персональный AI-план по уходу, стилю, волосам и форме.">
+<style>
+:root{--bg:#f7f8fb;--panel:#fff;--text:#11141a;--muted:#687180;--line:#dfe5ee;--blue:#2f6bff;--blue2:#2457d6}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}a{text-decoration:none;color:inherit}.wrap{max-width:1080px;margin:auto;padding:0 22px}
+nav{height:76px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line)}.brand{font-weight:950;letter-spacing:.08em;font-size:18px;color:var(--blue2)}.navbtn,.btn{border:1px solid #151a22;background:#151a22;color:#fff;padding:11px 17px;border-radius:12px;font-weight:800;cursor:pointer}.btn.primary{background:var(--blue);border-color:var(--blue);color:#fff}.btn.large{padding:15px 22px;font-size:16px}
+.hero{padding:100px 0 90px;text-align:center}.eyebrow{display:inline-block;color:var(--blue2);background:#edf3ff;border:1px solid #c9d8ff;padding:7px 12px;border-radius:999px;font-size:12px;font-weight:900;letter-spacing:.05em}h1{font-size:clamp(52px,8vw,88px);line-height:.92;letter-spacing:-.065em;margin:24px auto 20px;max-width:850px}h1 em{font-style:normal;color:var(--blue2)}.lead{max-width:650px;margin:0 auto 30px;color:var(--muted);font-size:18px;line-height:1.55}.hero-actions{display:flex;justify-content:center;gap:10px;flex-wrap:wrap}.micro{margin-top:15px;color:#818996;font-size:12px}
+section{padding:74px 0}.section-title{text-align:center;max-width:720px;margin:0 auto 38px}.section-title h2{font-size:42px;line-height:1.05;letter-spacing:-.045em;margin:0 0 12px}.section-title p{color:var(--muted);margin:0;line-height:1.5}
+.pricing-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}.price{background:var(--panel);border:1px solid var(--line);border-radius:22px;padding:27px;position:relative;box-shadow:0 14px 40px rgba(17,20,26,.045)}.price.featured{border-color:#8db0ff;box-shadow:0 18px 55px rgba(47,107,255,.11)}.popular{position:absolute;right:15px;top:15px;background:var(--blue);color:#fff;padding:6px 9px;border-radius:999px;font-size:10px;font-weight:950}.tag{color:var(--blue2);font-size:12px;font-weight:950;letter-spacing:.1em}.price h3{font-size:22px;margin:12px 0 5px}.amount{font-size:56px;font-weight:950;letter-spacing:-.06em}.price-desc{min-height:42px;color:var(--muted);font-size:13px}.checks{margin:20px 0}.checks div{padding:7px 0;color:#3a414d;font-size:14px}.checks div:before{content:"✓";color:var(--blue2);font-weight:950;margin-right:9px}.note{text-align:center;color:#7e8793;font-size:11px;margin-top:17px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}.card{background:var(--panel);border:1px solid var(--line);border-radius:20px;padding:25px}.icon{font-size:13px;color:var(--blue2);font-weight:950;letter-spacing:.08em;margin-bottom:16px}.card h3{margin:0 0 8px}.card p{margin:0;color:var(--muted);font-size:14px;line-height:1.55}
+footer{padding:48px 0 70px;border-top:1px solid var(--line);color:#7a828e;font-size:12px;text-align:center}footer .brand{display:inline-block;margin-bottom:8px}
+.modal{position:fixed;inset:0;background:rgba(20,25,32,.38);backdrop-filter:blur(8px);display:none;align-items:center;justify-content:center;padding:20px;z-index:20}.modal.open{display:flex}.modalbox{max-width:500px;width:100%;background:#fff;border:1px solid var(--line);box-shadow:0 30px 100px rgba(17,20,26,.18);border-radius:24px;padding:29px;position:relative}.close{position:absolute;right:14px;top:10px;background:none;border:0;color:#687180;font-size:25px;cursor:pointer}.selected-plan{color:var(--blue2);font-weight:900;font-size:13px}.hidden{display:none}
+@media(max-width:850px){.pricing-grid,.grid{grid-template-columns:1fr}.price.featured{transform:none}.hero{padding:75px 0 65px}.navbtn{display:none}.section-title h2{font-size:36px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<nav><a class="brand" href="#">sb</a><button class="navbtn" onclick="document.getElementById('pricing').scrollIntoView({behavior:'smooth'})">Тарифы</button></nav>
+
+<header class="hero">
+<div class="eyebrow">PERSONAL AI GLOW-UP COACH</div>
+<h1>Выгляди <em>сильнее.</em><br>Начни с себя.</h1>
+<p class="lead">Персональная система улучшения внешности: волосы, уход, стиль, форма и подача. AI превращает твою цель в конкретный план действий.</p>
+<div class="hero-actions"><button class="btn primary large" onclick="document.getElementById('pricing').scrollIntoView({behavior:'smooth'})">Выбрать план →</button><button class="btn large" onclick="document.getElementById('how').scrollIntoView({behavior:'smooth'})">Как работает</button></div>
+<div class="micro">Разовая покупка · Telegram-доступ · без автоматической подписки</div>
+</header>
+
+<section id="pricing"><div class="section-title"><h2>Тарифы</h2><p>Выбери уровень и получи персональный план действий.</p></div><div class="pricing-grid">
+<div class="price"><div class="tag">START</div><h3>7-Day Glow-Up</h3><div class="amount">49 ₽</div><p class="price-desc">7 дней, чтобы начать без перегруза.</p><div class="checks"><div>7-дневный маршрут</div><div>Ежедневные задания</div><div>Приоритеты</div><div>Чек-лист прогресса</div></div><button class="btn primary large" style="width:100%" onclick="openModal('START')">Начать →</button></div>
+<div class="price featured"><div class="popular">САМЫЙ ПОПУЛЯРНЫЙ</div><div class="tag">TRANSFORM</div><h3>30-Day Upgrade</h3><div class="amount">99 ₽</div><p class="price-desc">Полный месяц системной работы.</p><div class="checks"><div>30-дневная программа</div><div>4 направления</div><div>Еженедельные checkpoints</div><div>AI-рекомендации</div><div>Трекер прогресса</div><div>Бонус: быстрые улучшения</div></div><button class="btn primary large" style="width:100%" onclick="openModal('TRANSFORM')">Выбрать →</button></div>
+<div class="price"><div class="tag">PRO</div><h3>Full Looks Audit</h3><div class="amount">179 ₽</div><p class="price-desc">Глубокий разбор и roadmap.</p><div class="checks"><div>Расширенная диагностика</div><div>Приоритеты на 30 дней</div><div>Лицо, волосы, стиль, форма</div><div>Персональный checklist</div><div>Расширенный roadmap</div></div><button class="btn primary large" style="width:100%" onclick="openModal('PRO')">Выбрать →</button></div>
+</div><div class="note">Разовая покупка. После подтверждения оплаты доступ привязывается к Telegram.</div></section>
+
+<section id="how"><div class="section-title"><h2>Как работает</h2><p>Три простых шага от цели до персонального плана.</p></div><div class="grid">
+<div class="card"><div class="icon">01</div><h3>Выбираешь тариф</h3><p>Определяешь нужный уровень — быстрый старт, месяц работы или глубокий разбор.</p></div>
+<div class="card"><div class="icon">02</div><h3>Проходишь диагностику</h3><p>Telegram-бот задаёт короткие вопросы о твоей цели, времени и приоритетах.</p></div>
+<div class="card"><div class="icon">03</div><h3>Получаешь план</h3><p>AI формирует маршрут, а Telegram выдаёт конкретные задания и следующий шаг.</p></div>
+</div></section>
+
+<footer><div class="brand">sb</div><div>CEO strizh&amp;boris.corp</div></footer>
+</div>
+
+<div class="modal" id="modal"><div class="modalbox"><button class="close" onclick="closeModal()">×</button><div class="selected-plan" id="planLabel">START · 49 ₽</div><h2>Привяжи Telegram</h2><p style="color:var(--muted)">Сначала бот свяжет заказ с твоим Telegram. После этого появится кнопка оплаты, а после оплаты доступ активируется автоматически.</p><button class="btn primary large" id="tgBtn" style="width:100%" onclick="createOrder()">Открыть Telegram →</button><div id="fallback" class="hidden"><p style="color:var(--muted);font-size:13px">Если Telegram не открылся:</p><a id="paymentLink" class="btn large" style="display:block;text-align:center" target="_blank">Перейти к оплате</a></div><div id="loading" class="hidden" style="color:var(--muted);margin-top:12px">Создаём защищённый заказ…</div><div class="note">Платёж подтверждается сервером. Само возвращение на сайт не считается оплатой.</div></div></div>
+<script>
+let currentPlan='START';
+const labels={START:'START · 49 ₽',TRANSFORM:'TRANSFORM · 99 ₽',PRO:'PRO · 179 ₽'};
+function openModal(plan){currentPlan=plan;document.getElementById('planLabel').textContent=labels[plan];document.getElementById('modal').classList.add('open')}
+function closeModal(){document.getElementById('modal').classList.remove('open')}
+async function createOrder(){
+ const btn=document.getElementById('tgBtn');btn.disabled=true;document.getElementById('loading').classList.remove('hidden');
+ try{const r=await fetch('/api/orders',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({product:currentPlan})});const data=await r.json();if(!r.ok)throw new Error(data.error||'Ошибка');if(data.telegram_url){window.location.href=data.telegram_url}else{document.getElementById('fallback').classList.remove('hidden');document.getElementById('paymentLink').href=data.payment_url}}
+ catch(e){alert('Не удалось создать заказ: '+e.message)}finally{btn.disabled=false;document.getElementById('loading').classList.add('hidden')}
+}
+document.getElementById('modal').addEventListener('click',e=>{if(e.target.id==='modal')closeModal()});
+</script>
+</body></html>
