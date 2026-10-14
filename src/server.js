@@ -96,10 +96,11 @@ async function activateOrder(orderId, paymentId) {
     .run(payment.id,new Date().toISOString(),orderId);
   const updated=db.prepare('SELECT * FROM orders WHERE id=?').get(orderId);
   if(updated.telegram_id){
-    await tgSend(updated.telegram_id,
-      `✅ <b>Оплата прошла</b>\n\nТариф: <b>${PRODUCTS[updated.product].name}</b>\n\nТвой LUXMAX AI активирован. Нажми кнопку ниже, чтобы начать персональную диагностику.`,
-      {inline_keyboard:[[{text:'🔥 Начать LUXMAX',callback_data:`start:${updated.product}`}]]}
-    );
+   await tgSend(updated.telegram_id, 
+  `✅ <b>Оплата прошла!</b>\n\n` +
+  `Спасибо за покупку! Твой продукт доступен по ссылке:\n\n` +
+  `🔗 <a href="http://magenta-piroshki-ff447d.netlify.app">Открыть продукт</a>`
+);
   }
   return updated;
 }
