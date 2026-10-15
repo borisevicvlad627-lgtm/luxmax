@@ -153,7 +153,7 @@ app.post('/api/telegram/webhook', async (req,res)=>{
           : `🔥 <b>LUXMAX AI</b>\n\nЗаказ привязан к этому Telegram.\nТариф: <b>${PRODUCTS[order.product].name}</b>\nСумма: <b>${order.amount} ₽</b>\n\nПосле оплаты доступ активируется автоматически.`,
           keyboard);
       } else {
-        await tgSend(msg.chat.id,'Привет! Открой сайт LUXMAX AI и выбери тариф, чтобы получить персональную ссылку.');
+        await tgSend(msg.chat.id, '👋 <b>Привет! Я — LUXMAX AI.</b>\n\nВыбери тариф на сайте, оплати — и я пришлю тебе ссылку на продукт прямо сюда.\n\n🔗 <a href="https://luxmax.onrender.com">Открыть сайт LUXMAX AI</a>');
       }
     }
     const cb=update?.callback_query;
